@@ -1,0 +1,53 @@
+Opg.2)
+
+- React anvender denne key til at vurdere hvilke ting fra den virtuelle DOM som skal opdateres
+i den rigtige DOM
+
+- Man kan bruge map metodens index parameter.
+
+- Props er READ-ONLY hvilket state ikke er.
+Desuden trigger state render metoden automatisk hver gang state ændres
+
+- Når data ikke ændres inde i det givne component bør man anvende props
+istedet for state.
+
+- Det kan man kun inde i constructor.
+
+- Ved at anvende setState metoden.
+
+
+Opg. 4)
+
+- Ved at sætte value på input elementet til this.state.xxxx vil input
+feltet altid afspejle state.
+Og ved at bruge this.setState({ xxx : value }) i en handleChange metode
+som kaldes ved at indsætte onChange={this.handleChange} i form vil state 
+altid være det samme som i input elementet 
+
+- Det sikrer at event handlingen stopper.
+
+- Det kunne eksempelvis forårsage en genindlæsning af siden et anden sted 
+i systemet når der måske trykkes submit.
+
+- At sikre os at alle ressourcer ikke bliver genindlæst.
+
+- ?????
+
+- En Controlled Component er et component der styrer input af den form 
+den indeholder
+
+
+
+
+Opg. 6)
+
+- "Lifting up state" betyder at man flytter state fra en component til en
+anden component. Ofte har en ændring i state hos et component også 
+indflydelse på state i andre componenter.
+
+- Nærmeste fælles parent component.
+
+- Ovenfra og ned.
+
+- Det gør det nemmere at isolere og finde fejl.
+
